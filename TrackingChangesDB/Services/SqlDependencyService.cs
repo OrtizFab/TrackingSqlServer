@@ -34,10 +34,10 @@ namespace TrackingChangesDB.Services
                     Console.WriteLine("Record  Inserted client batch Id: " + e.Entity.posting_instruction_batch_client_id + " Status :" + e.Entity.status);
                     break;
                 case TableDependency.SqlClient.Base.Enums.ChangeType.Update:
-                    Console.WriteLine("Edited record client batch id: " + e.Entity.posting_instruction_batch_client_id + " Status: "+ e.Entity.status);
+                    Console.WriteLine("Record Edited client batch id: " + e.Entity.posting_instruction_batch_client_id + " Status: "+ e.Entity.status);
                     break;
                 case TableDependency.SqlClient.Base.Enums.ChangeType.Delete:
-                    Console.WriteLine("Delete record client batch id: " + e.Entity.posting_instruction_batch_client_id + " Status: " + e.Entity.status);
+                    Console.WriteLine("Record Deleted client batch id: " + e.Entity.posting_instruction_batch_client_id + " Status: " + e.Entity.status);
                     break;
             }
             
