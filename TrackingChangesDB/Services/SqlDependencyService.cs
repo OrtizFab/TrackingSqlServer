@@ -15,10 +15,10 @@ namespace TrackingChangesDB.Services
             string connectionString = TrackingChangesDB.Properties.Resources.stringConnection;
             using (TableDependency.SqlClient.SqlTableDependency<PostingCreations> dep = new TableDependency.SqlClient.SqlTableDependency<PostingCreations>(connectionString))
             {
-                dep.OnChanged += Dep_OnChanged;
-                Console.WriteLine("Press any key to stop");
+                dep.OnChanged += Dep_OnChanged;               
 
                 dep.Start();
+                 Console.WriteLine("Press any key to stop");
                 
                 Console.ReadKey();
                 dep.Stop();
